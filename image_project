@@ -1,0 +1,28 @@
+from PIL import Image
+
+
+# 打开两张图片
+bg = Image.open('./image_hecheng/001WN8zPly8hgqt27mgaxj60hs0qo41w02.jpg')
+fb = Image.open('./image_hecheng/pixiu.png').resize((100, 100))
+bg_size = bg.size
+fb_size = fb.size
+"""
+# 确定两张图片的大小和位置（这里以简单的方式叠加，可以根据需要调整位置）
+# 例如，将第二张图片放在第一张图片的右侧
+# 计算新图片的宽度和高度
+new_width = image1.width + image2.width
+new_height = max(image1.height, image2.height)  # 可以选择最大高度或自定义高度
+
+# 创建一个新的空白图片
+result_image = Image.new('RGB', (new_width, new_height))
+
+# 将第一张图片粘贴到新图片上
+result_image.paste(image1, (0, 0))
+# 将第二张图片粘贴到新图片上，偏移量为第一张图片的宽度
+result_image.paste(image2, (image1.width, 0))
+result_image.save('path/to/your/combined_image.jpg')
+"""
+# 保存合成后的图片
+# bg.paste(fb, (0, 0))
+# bg.save('./image_hecheng/hecheng.png')
+print(bg_size)
